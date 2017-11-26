@@ -19,18 +19,36 @@ body {
 
 body,
 input[text],
-button {
+button,
+span,
+a {
     color: #888;
-    font-family: Roboto, Georgia;
+    font-family: Roboto, Helvetica, sans-serif;
+    -webkit-transition: all 150ms ease-in-out !important;
+    -moz-transition: all 150ms ease-in-out !important;
+    -ms-transition: all 150ms ease-in-out !important;
+    -o-transition: all 150ms ease-in-out !important;
+    transition: all 150ms ease-in-out !important;
 }
 
+a{
+    text-decoration: none !important;
+    span{
+        text-decoration: none !important;
+    }
+}
+
+mat-icon{
+    font-family: 'Material Icons' !important;
+  }
 
 /* everywhere else */
 
 * {
     font-family: Roboto, Helvetica, sans-serif;
-    -webkit-transition: all 0.2s ease-in-out !important;
-    -moz-transition: all 0.2s ease-in-out !important;
-    -ms-transition: all 0.2s ease-in-out !important;
-    -o-transition: all 0.2s ease-in-out !important;
+    -webkit-transition: all 150ms ease-in-out !important;
+    -moz-transition: all 150ms ease-in-out !important;
+    -ms-transition: all 150ms ease-in-out !important;
+    -o-transition: all 150ms ease-in-out !important;
+    transition: all 150ms ease-in-out !important;
 }

@@ -1,0 +1,19 @@
+<div class="buttons">
+  <button [disabled]="!canAdd()" (click)="addInactive()">Add inactive hero</button>
+  <button [disabled]="!canAdd()" (click)="addActive()">Add active hero</button>
+  <button [disabled]="!canRemove()" (click)="remove()">Remove hero</button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" 
+  (@flyInOut.start)="animationStarted($event)"
+  (@flyInOut.done)="animationDone($event)"
+  [@flyInOut]="'in'"
+  (click)="hero.toggleState()"
+  [ngClass]="hero.state">
+      <span class="badge">{{hero.id}}</span>
+      <span class="hero-name">{{hero.name}}</span>
+  </li>
+</ul>
+
+<button (click)="goBack()">go back</button>

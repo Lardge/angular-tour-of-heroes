@@ -1,2 +1,12 @@
 <h1>{{title}}</h1>
-<app-heroes></app-heroes>
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+</button>
+
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+  <button mat-menu-item routerLink="/heroes">Heroes</button>
+  <button mat-menu-item routerLink="/hero-list">Hero list</button>
+</mat-menu>
+<router-outlet></router-outlet>
+<!--<app-messages></app-messages>-->
