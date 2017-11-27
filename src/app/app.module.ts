@@ -30,37 +30,20 @@ import {
   MatSliderModule,
   MatSlideToggleModule,
   MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-}                                 from '@angular/material';
+  MatSortModule
+}                                  from '@angular/material';
 
 // COMPOENTS AND SERVICES
 import { AppComponent }            from './app.component';
-// import { HeroesComponent }         from './components/heroes/heroes.component';
-// import { HeroDetailComponent }     from './components/hero-detail/hero-detail.component';
-import { HeroService }             from './services/hero.service';
-// import { MessagesComponent }       from './components/messages/messages.component';
-import { MessageService }          from './services/message.service';
 import { AppRoutingModule }        from './app-routing.module';
-// import { DashboardComponent }      from './components/dashboard/dashboard.component';
-// import { HeroListComponent }       from './components/hero-list/hero-list.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { HomeComponent } from './components/home/home.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { WhyMeComponent } from './components/why-me/why-me.component';
+import { AboutMeComponent }        from './components/about-me/about-me.component';
+import { HomeComponent }           from './components/home/home.component';
+import { ProjectsComponent }       from './components/projects/projects.component';
+import { WhyMeComponent }          from './components/why-me/why-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HeroesComponent,
-    // HeroDetailComponent,
-    // MessagesComponent,
-    // DashboardComponent,
-    // HeroListComponent,
     AboutMeComponent,
     HomeComponent,
     ProjectsComponent,
@@ -77,7 +60,6 @@ import { WhyMeComponent } from './components/why-me/why-me.component';
     MatCardModule,
     MatCheckboxModule,
     MatChipsModule,
-    MatStepperModule,
     MatDatepickerModule,
     MatDialogModule,
     MatExpansionModule,
@@ -98,10 +80,6 @@ import { WhyMeComponent } from './components/why-me/why-me.component';
     MatSlideToggleModule,
     MatSnackBarModule,
     MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -110,7 +88,6 @@ import { WhyMeComponent } from './components/why-me/why-me.component';
     MatCardModule,
     MatCheckboxModule,
     MatChipsModule,
-    MatStepperModule,
     MatDatepickerModule,
     MatDialogModule,
     MatExpansionModule,
@@ -130,15 +107,9 @@ import { WhyMeComponent } from './components/why-me/why-me.component';
     MatSliderModule,
     MatSlideToggleModule,
     MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
+    MatSortModule
   ],
-  providers: [
-    HeroService,
-    MessageService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

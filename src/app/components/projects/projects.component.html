@@ -1,3 +1,5 @@
-<p>
-  projects works!
-</p>
+<section id="projects" (@flyInOut.start)="animationStarted($event)" (@flyInOut.done)="animationDone($event)" [@flyInOut]="'in'">
+  <p>
+    projects works!
+  </p>
+</section>
