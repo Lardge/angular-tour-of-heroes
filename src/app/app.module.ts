@@ -40,23 +40,25 @@ import {
 
 // COMPOENTS AND SERVICES
 import { AppComponent }            from './app.component';
-import { HeroesComponent }         from './components/heroes/heroes.component';
-import { HeroDetailComponent }     from './components/hero-detail/hero-detail.component';
+// import { HeroesComponent }         from './components/heroes/heroes.component';
+// import { HeroDetailComponent }     from './components/hero-detail/hero-detail.component';
 import { HeroService }             from './services/hero.service';
-import { MessagesComponent }       from './components/messages/messages.component';
+// import { MessagesComponent }       from './components/messages/messages.component';
 import { MessageService }          from './services/message.service';
 import { AppRoutingModule }        from './app-routing.module';
-import { DashboardComponent }      from './components/dashboard/dashboard.component';
-import { HeroListComponent }       from './components/hero-list/hero-list.component';
+// import { DashboardComponent }      from './components/dashboard/dashboard.component';
+// import { HeroListComponent }       from './components/hero-list/hero-list.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent,
-    HeroListComponent
+    // HeroesComponent,
+    // HeroDetailComponent,
+    // MessagesComponent,
+    // DashboardComponent,
+    // HeroListComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
