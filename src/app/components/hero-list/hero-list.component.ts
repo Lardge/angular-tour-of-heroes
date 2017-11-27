@@ -1,12 +1,12 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { ActivatedRoute }                      from '@angular/router';
-import { Location }                            from '@angular/common';
-import { AnimationEvent, trigger, state, style, animate, transition, keyframes} from '@angular/animations';
+// tslint:disable:import-spacing
+import { Component, OnInit, Input, ViewChild }          from '@angular/core';
+import { ActivatedRoute }                               from '@angular/router';
+import { Location }                                     from '@angular/common';
+import { AnimationEvent, trigger, state, style}         from '@angular/animations';
+import { animate, transition, keyframes, stagger}       from '@angular/animations';
 
 import { Hero } from '../../classes/hero';
 import { HeroService } from '../../services/hero.service';
-
-
 
 const ALL_HEROES = [
   'Windstorm',
@@ -30,12 +30,14 @@ const ALL_HEROES = [
     trigger('flyInOut', [
       state('in', style({transform: 'translateY(0)'})),
       transition('void => *', [
-        animate(250, keyframes([
-          style({opacity: 0, transform: 'translateY(100%)', offset: 0}),
-          style({opacity: 0.5, transform: 'translateY(-10px)',  offset: 0.33}),
-          style({opacity: 0.75, transform: 'translateY(5px)', offset: 0.66}),
-          style({opacity: 1, transform: 'translateY(0)', offset: 1.0})
-        ]))
+        stagger(100, [
+          animate(250, keyframes([
+            style({opacity: 0, transform: 'translateY(100%)', offset: 0}),
+            style({opacity: 0.5, transform: 'translateY(-10px)',  offset: 0.33}),
+            style({opacity: 0.75, transform: 'translateY(5px)', offset: 0.66}),
+            style({opacity: 1, transform: 'translateY(0)', offset: 1.0})
+          ]))
+        ])
       ]),
       transition('* => void', [
         animate(250, keyframes([
