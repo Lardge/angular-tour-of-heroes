@@ -1,12 +1,36 @@
-import { Component } from '@angular/core';
+import { Component }                                                      from '@angular/core';
 import { MatIcon, MatIconButtonCssMatStyler, MatIconBase, MatIconModule } from '@angular/material';
+import { AnimationEvent, trigger, state, style}                           from '@angular/animations';
+import { animate, transition, keyframes, stagger}                         from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.less'],
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({transform: 'translateY(0)'})),
+      transition('void => *', [
+          animate(250, keyframes([
+            style({opacity: 0, transform: 'translateY(100%)', offset: 0}),
+            style({opacity: 0.5, transform: 'translateY(-10px)',  offset: 0.33}),
+            style({opacity: 0.75, transform: 'translateY(5px)', offset: 0.66}),
+            style({opacity: 1, transform: 'translateY(0)', offset: 1.0})
+          ]))
+      ]),
+      transition('* => void', [
+          animate(250, keyframes([
+            style({opacity: 1, transform: 'translateY(0px)',     offset: 0}),
+            style({ opacity: 1, transform: 'translateY(10px)', offset: 0.33}),
+            style({opacity: 0, transform: 'translateY(-50%)', height: 0, padding: 0, margin: 0, offset: 1.0})
+          ]))
+      ])
+    ])
+  ]
 })
+
 export class AppComponent {
   title = 'Tour of Heroes';
-
+  checked = true;
+  disabled = true;
 }
