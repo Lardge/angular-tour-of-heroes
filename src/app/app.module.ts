@@ -49,6 +49,9 @@ import { AppRoutingModule }        from './app-routing.module';
 // import { DashboardComponent }      from './components/dashboard/dashboard.component';
 // import { HeroListComponent }       from './components/hero-list/hero-list.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { WhyMeComponent } from './components/why-me/why-me.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     // MessagesComponent,
     // DashboardComponent,
     // HeroListComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    HomeComponent,
+    ProjectsComponent,
+    WhyMeComponent
   ],
   imports: [
     BrowserModule,
