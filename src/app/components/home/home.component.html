@@ -1,5 +1,5 @@
 <section id="home" (@flyInOut.start)="animationStarted($event)" (@flyInOut.done)="animationDone($event)" [@flyInOut]="'in'">
-  <mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-list cols="4" rowHeight="100px" gutterSize="4px">
     <mat-grid-tile
         *ngFor="let tile of tiles"
         [colspan]="tile.cols"
