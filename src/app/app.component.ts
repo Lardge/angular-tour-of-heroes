@@ -4,6 +4,7 @@ import { AnimationEvent, trigger, state, style, group, }                  from '
 import { animate, transition, keyframes, stagger, query}                  from '@angular/animations';
 import { MediaMatcher }                                                   from '@angular/cdk/layout';
 
+
 // ROUTER TRANSITIONS
 const routerTransition = trigger('routerTransition', [
   transition('* <=> *', [
@@ -47,6 +48,8 @@ const flyInOutAnimation = trigger('flyInOut', [
   ])
 ]);
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -77,7 +80,7 @@ export class AppComponent {
   }
 
   // tslint:disable-next-line:use-life-cycle-interface
-  ngOnDestroy(): void {
+  /*ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
@@ -91,7 +94,7 @@ export class AppComponent {
 
   animationDone(event: AnimationEvent) {
     console.warn('Animation done: ', event);
-  }
+  }*/
 }
 
 

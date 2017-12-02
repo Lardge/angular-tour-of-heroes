@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1600px" height="900px" viewBox="0 0 1600 900" enable-background="new 0 0 1600 900" xml:space="preserve">
+<filter  id="AI_GaussianBlur_7">
+	<feGaussianBlur  stdDeviation="7"></feGaussianBlur>
+</filter>
+<g filter="url(#AI_GaussianBlur_7)">
+	<path fill="#26A69A" d="M1731.655-238.656l32,1268c0,0-1888,20-1884-24s-104-1192-104-1192L1731.655-238.656z"/>
+</g>
+<g opacity="0.39" filter="url(#AI_GaussianBlur_7)">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="118.4359" y1="1102.725" x2="1449.6825" y2="-343.7986">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="0.7336" style="stop-color:#000000;stop-opacity:0.1413"/>
+		<stop  offset="0.8543" style="stop-color:#000000;stop-opacity:0"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_1_)" points="-224.345,-184.65 1271.655,-56.65 1619.655,767.35 1619.655,1131.35 -268.345,1159.35 	"/>
+</g>
+<g filter="url(#AI_GaussianBlur_7)">
+	<polygon fill="#66BB6A" points="-248.476,-184.65 1247.524,-56.65 1595.524,767.35 1595.524,1131.35 -292.476,1159.35 	"/>
+</g>
+<g filter="url(#AI_GaussianBlur_7)">
+	<polygon fill="#F9A825" points="1338.964,377.422 1565.556,234.144 1580.557,978.218 1266.782,882.344 	"/>
+</g>
+<g opacity="0.39" filter="url(#AI_GaussianBlur_7)">
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="110.7444" y1="972.4021" x2="1142.0619" y2="-148.2205">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="0.7336" style="stop-color:#000000;stop-opacity:0.1413"/>
+		<stop  offset="0.8543" style="stop-color:#000000;stop-opacity:0"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_2_)" points="-135.655,-150.733 1372.619,413.344 1305.31,1065.267 -135.655,1065.267 	"/>
+</g>
+<g filter="url(#AI_GaussianBlur_7)">
+	<polygon fill="#9CCC65" points="-156.345,-186.656 1338.964,377.422 1271.655,1029.344 -156.345,1029.344 	"/>
+</g>
+<g filter="url(#AI_GaussianBlur_7)">
+	<polygon fill="#FF8F00" points="970.088,672.948 1546.655,509.344 1546.655,882.344 893.489,882.344 	"/>
+</g>
+<g opacity="0.39" filter="url(#AI_GaussianBlur_7)">
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-126.0719" y1="944.2824" x2="697.5267" y2="49.3657">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="0.7336" style="stop-color:#000000;stop-opacity:0.1413"/>
+		<stop  offset="0.8543" style="stop-color:#000000;stop-opacity:0"/>
+	</linearGradient>
+	<polygon fill="url(#SVGID_3_)" points="-226.706,-130.978 -167.556,1161.355 880.413,1035.251 960.088,774.086 999.655,664.469 
+		1020.316,658.59 1029.988,634.344 	"/>
+</g>
+<g filter="url(#AI_GaussianBlur_7)">
+	<polygon fill="#D4E157" points="-156.345,-110.656 -120.345,1129.344 843.655,1013.344 999.655,593.344 	"/>
+</g>
+<g filter="url(#AI_GaussianBlur_7)">
+	<polygon fill="#EF6C00" points="438.51,780.132 1546.655,765.197 1546.655,882.344 313.585,882.344 	"/>
+</g>
+<g opacity="0.39" filter="url(#AI_GaussianBlur_7)">
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-402.4833" y1="873.3439" x2="284.289" y2="127.1017">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="0.7336" style="stop-color:#000000;stop-opacity:0.1413"/>
+		<stop  offset="0.8543" style="stop-color:#000000;stop-opacity:0"/>
+	</linearGradient>
+	<polyline fill="url(#SVGID_4_)" points="-148.052,1320.344 -554.345,855.334 -473.608,25.418 629.373,677.344 513.499,779.121 
+		472.259,780.011 	"/>
+</g>
+<g filter="url(#AI_GaussianBlur_7)">
+	<polygon fill="#E9ED9D" points="-335.156,49.344 632.6,621.344 -120.353,1237.344 -476.834,829.344 	"/>
+</g>
+</svg>

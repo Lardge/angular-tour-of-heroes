@@ -1,4 +1,7 @@
 <section id="home" (@flyInOut.start)="animationStarted($event)" (@flyInOut.done)="animationDone($event)" [@flyInOut]="'in'">
+  <div class="home-bg">
+  </div>
+  
   <mat-grid-list cols="4" rowHeight="100px" gutterSize="4px">
     <mat-grid-tile
         *ngFor="let tile of tiles"
