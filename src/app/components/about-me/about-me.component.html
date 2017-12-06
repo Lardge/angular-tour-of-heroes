@@ -4,9 +4,9 @@
   (@flyInOut.done)="animationDone($event)"
   [@flyInOut]="'in'">
     <mat-card-content>
-      <h2 class="example-h2">Result</h2>
+      <h2 class="example-h2">About me</h2>
   
-      <section class="example-section">
+      <div class="example-section">
         <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
         <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
         <mat-slide-toggle
@@ -16,7 +16,8 @@
             [disabled]="disabled">
           Slide me!
         </mat-slide-toggle>
-      </section>
+      </div>
+
     </mat-card-content>
   </mat-card>
 </section>

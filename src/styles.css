@@ -2,15 +2,16 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
 /* indigo-pink.css; */
 
-section{
-    margin: 10px;
-}
-
-
 
 body {
     margin: 0px !important;
 }
+
+section{
+    padding: 10px;
+    height: calc(100% - 20px);
+}
+
 
 
 
