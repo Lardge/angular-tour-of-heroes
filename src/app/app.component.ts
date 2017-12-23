@@ -6,12 +6,10 @@ import { MediaMatcher }                                                   from '
 
 
 // ROUTER TRANSITIONS
-const routerTransition = trigger('routerTransition', [
+const routerTransition_OLD = trigger('routerTransition', [
   transition('* <=> *', [
-    query(':enter, :leave', style({ position: 'fixed', width: '100%' })
-      , { optional: true }),
-    query('.block', style({ opacity: 0 })
-      , { optional: true }),
+    query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
+    query('.block', style({ opacity: 0 }), { optional: true }),
     group([
       query(':enter', [
         style({ transform: 'translateX(100%)' }),
@@ -48,19 +46,104 @@ const flyInOutAnimation = trigger('flyInOut', [
   ])
 ]);
 
+const routerTransition = trigger('routeAnimation', [
+  transition('1 => 2, 2 => 3', [
+      style({ height: '!' }),
+      query(':enter', style({ transform: 'translateX(75%)'})),
+      query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0, right: 0 })),
+      // animate the leave page away
+      group([
+          query(':leave', [
+             animate('350ms cubic-bezier(.35,1,.35,1)', style({ transform: 'translateX(-100%)'})),
+          ]),
+          // and now reveal the enter
+          query(':enter', [
+            animate('350ms cubic-bezier(.35,1,.35,1)', style({ transform: 'translateX(0)'})),
+          ]),
+      ]),
+  ]),
+  transition('3 => 2, 2 => 1, * <=> *', [
+      style({ height: '!' }),
+      query(':enter', style({ transform: 'translateX(-75%)' })),
+      query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0, right: 0 })),
+      // animate the leave page away
+      group([
+          query(':leave', [
+            animate('350ms cubic-bezier(.35,1,.35,1)', style({ transform: 'translateX(100%)' })),
 
+          ]),
+          // and now reveal the enter
+          query(':enter', [
+            animate('350ms cubic-bezier(.35,1,.35,1)', style({ transform: 'translateX(0)' }))
+          ]),
+      ]),
+  ]),
+]);
+
+const routerTransition2 = trigger('routeAnimation', [
+  transition('* <=> *', [
+      style({ height: '!' }),
+      query(':enter', style({ transform: 'translateX(-75%)' }), { optional: true }),
+      query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0, right: 0 }), { optional: true }),
+      // animate the leave page away
+      group([
+          query(':leave', [
+            // animate('350ms cubic-bezier(.35,1,.35,1)', style({ transform: 'translateX(100%)' })),
+            animate(250, keyframes([
+              style({opacity: 1, transform: 'translateY(0px)', offset: 0}),
+              style({ opacity: 1, transform: 'translateY(-100%)', offset: 0.33}),
+              style({opacity: 0, transform: 'translateY(-100%)', height: 0, padding: 0, margin: 0, offset: 1})
+            ]))
+          ], { optional: true }),
+          // and now reveal the enter
+          query(':enter', [
+            // animate('350ms cubic-bezier(.35,1,.35,1)', style({ transform: 'translateX(0)' }))
+            animate(250, keyframes([
+              style({opacity: 0, transform: 'translateY(100%)', offset: 0}),
+              style({opacity: 0.5, transform: 'translateY(-10px)',  offset: 0.33}),
+              style({opacity: 0.75, transform: 'translateY(5px)', offset: 0.66}),
+              style({opacity: 1, transform: 'translateY(0)', offset: 1.0})
+            ]))
+          ], { optional: true }),
+      ]),
+  ]),
+]);
+
+
+/*
+
+trigger('flyInOut', [
+      state('in', style({transform: 'translateY(0)'})),
+      transition('void => *', [
+          animate(250, keyframes([
+            style({opacity: 0, transform: 'translateY(100%)', offset: 0}),
+            style({opacity: 0.5, transform: 'translateY(-10px)',  offset: 0.33}),
+            style({opacity: 0.75, transform: 'translateY(5px)', offset: 0.66}),
+            style({opacity: 1, transform: 'translateY(0)', offset: 1.0})
+          ]))
+      ]),
+      transition('* => void', [
+          animate(250, keyframes([
+            style({opacity: 1, transform: 'translateY(0px)',     offset: 0}),
+            style({ opacity: 1, transform: 'translateY(10px)', offset: 0.33}),
+            style({opacity: 0, transform: 'translateY(-50%)', height: 0, padding: 0, margin: 0, offset: 1.0})
+          ]))
+      ])
+    ])
+
+*/
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
-  // animations: [ flyInOutAnimation ] // , routerTransition
+  animations: [ routerTransition2 ] // , routerTransition
 })
 
 export class AppComponent {
   // title = 'Portfolio V2';
 
-  mobileQuery: MediaQueryList;
+ /* mobileQuery: MediaQueryList;
 
   private _mobileQueryListener: () => void;
 
@@ -68,7 +151,16 @@ export class AppComponent {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+
+    /*const navigationItems = []
+      'home':
+        };
+  }*/
+
+  getDepth(outlet) {
+    return outlet.activatedRouteData['depth'];
   }
+
 
   // tslint:disable-next-line:use-life-cycle-interface
   /*ngOnDestroy(): void {

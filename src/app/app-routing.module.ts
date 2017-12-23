@@ -14,10 +14,10 @@ import { WhyMeComponent } from './components/why-me/why-me.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about-me', component: AboutMeComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'why-me', component: WhyMeComponent }
+  { path: 'home', component: HomeComponent, data: {depth: 1} },
+  { path: 'about-me', component: AboutMeComponent, data: {depth: 2} },
+  { path: 'projects', component: ProjectsComponent, data: {depth: 3} },
+  { path: 'why-me', component: WhyMeComponent, data: {depth: 4} }
 ];
 
 export const AppRouting = RouterModule.forRoot(routes, {

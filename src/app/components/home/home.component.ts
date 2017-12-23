@@ -60,7 +60,7 @@ export const homeTransition = trigger('homeTransition', [
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.less'],
-  animations: [ flyInOutAnimation ] // flyInOutAnimation,
+ // animations: [ flyInOutAnimation ] // flyInOutAnimation,
   // tslint:disable-next-line:use-host-property-decorator
   /*host: {
     '[@homeTransition]': ''

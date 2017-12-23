@@ -8,12 +8,21 @@ body {
 }
 
 section{
+    margin: 0px;
     padding: 10px;
     height: calc(100% - 20px);
+    overflow-x: hidden
 }
 
 
+section>*{
+    overflow-x: hidden
+}
 
-
-
-
+app-about-me, app-home{
+    display: block;
+    /* flex-wrap: wrap-reverse; */
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden
+}
