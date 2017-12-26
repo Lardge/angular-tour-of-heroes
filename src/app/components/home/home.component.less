@@ -1,3 +1,5 @@
+@import '../../app.component.less';
+
 #home{
 
   margin: 0px;
@@ -6,21 +8,195 @@
     margin: 10px;
   }
   
-.block {
-    background: #eee;
-    float: left;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 5px;
+  .letter{
+    font-size: 60px;
+    font-weight: bold;
   }
 
-  .home-bg{
+  .sub-title{
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  .space{
+    display: inline-block;
+    width: 10px;
+  }
+
+  .title-wrapper{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    span{
+      color: white;
+    }
+  }
+
+  .home-bg-1{
     background: url(/assets/bg/bg-1.svg);
     min-height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 58%;
+    position: relative;
+    overflow-x: visible;
+    z-index: 2000;
+
+    mat-card{
+      top: 50%;
+      right: 20%;
+      transform: translate(20%, -50%);
+    }
+
+    &::before{
+      content: '';
+      height: 100%;      
+      width: 100%;
+      position: absolute;
+      z-index: 1000;
+      top: 0px;
+      pointer-events: none;
+      //background:  url(/assets/bg/glass-glare.svg);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .home-bg-2{
+    background: url(/assets/bg/bg-13.svg);
+    min-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 58%;
+    position: relative;
+    overflow-x: visible;
+
+    mat-grid-list{
+      z-index: 2001;
+
+      mat-card{
+        z-index: 1000;
+        height: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  
+    }
+
+    &::before{
+      content: '';
+      height: 100%;      
+      width: 100%;
+      position: absolute;
+      z-index: 2000;
+      top: 0px;
+      pointer-events: none;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .home-bg-3{
+    background: url(/assets/bg/bg-3.svg);
+    min-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 58%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1998;
+
+    mat-card{
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    &::before{
+      content: '';
+      height: 100%;      
+      width: 100%;
+      position: absolute;
+      z-index: 998;
+      top: 0px;
+      pointer-events: none;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  mat-grid-list{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  mat-grid-tile{
+    overflow: visible;
+  }
+  mat-card{
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translate(25%, -50%);
+    background: rgba(255,255,255,0.2);
+    background: white;
+  
+    mat-card-header{
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+
+      .portrait-image{
+        background-image: url('/assets/imgs/portarit.jpg');
+        background-size: cover;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        height: 60px;
+        width: 60px;
+        margin-bottom: 10px;
+        // box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.15), 0 2px 2px 0 rgba(0, 0, 0, 0.15), 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+      } 
+    }
+
+    .mat-card-title{
+      margin-bottom: 8px;
+    }
+  }
+
+  mat-card-actions{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  mat-card-content{
+    text-align: center;
+  }
+
+  
+  path {
+    fill: transparent;
+  }
+
+  text {
+    fill: #FF9800;
+  }
+
+  .center{
+    margin: 0 auto;
+  }
+
+  .endTitle{
+    bottom: -44%;
+    position: absolute;
+    font-family: blowbrush;
+    width: 100%;
+
+    textPath{
+      font-family: Chardons;
+      font-size: 40px;
+    }
   }
 }

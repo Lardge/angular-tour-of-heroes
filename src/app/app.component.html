@@ -1,10 +1,10 @@
 <div class="main-container">
-  <mat-toolbar color="primary" class="example-toolbar">
+  <!--<mat-toolbar color="primary" class="example-toolbar">
     <button mat-icon-button class="menu-icon" (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <h1 class="app-name">Lars Beck-Friis</h1>
-  </mat-toolbar>
+  </mat-toolbar>-->
 
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #snav [mode]="'side'">
@@ -16,8 +16,18 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content [@routeAnimation]="getDepth(myOutlet)">
-      <router-outlet #myOutlet="outlet"></router-outlet>
+      
+    <div class="block">
+      hej
+    </div>   
+
+    <mat-sidenav-content [@routeAnimation]="getRouteDepth(route)">
+      <button mat-icon-button class="menu-icon" (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet #route="outlet"></router-outlet>
+   
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
