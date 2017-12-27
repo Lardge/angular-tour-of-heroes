@@ -1,4 +1,4 @@
-<section id="home"> <!-- (@flyInOut.start)="animationStarted($event)" (@flyInOut.done)="animationDone($event)" [@flyInOut]="'in'">-->
+<section id="home" (scroll)="onWindowScroll($event)"> <!-- (@flyInOut.start)="animationStarted($event)" (@flyInOut.done)="animationDone($event)" [@flyInOut]="'in'">-->
   <div class="home-bg-1">
     <div class="title-wrapper" [@homeAnimation]>     
       <span class="letter" *ngFor="let letter of homeTitleArray">{{letter}}</span>
@@ -18,44 +18,45 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button style="background: #FAFAFA">TO THE PORTFOLIO</button>
-        <!--<button mat-button color="warn">GET ME OUT OF HERE</button>-->
+        <button mat-raised-button class="light-gray-button">TO THE PORTFOLIO</button>
       </mat-card-actions>
     </mat-card>
   </div>
 
   <div class="home-bg-2">
-
       <mat-grid-list cols="2" rowHeight="2:1">
+
           <mat-grid-tile>
-              <mat-card>
+              <mat-card class="card-1" [@scrollAnimation]="scrollAnimationState">
                   <mat-card-content>
                     <p>
                       Hello there! The name's Lars, and I'm a web developer and socitechnical systems-engineer. I love clean coding and clean design. But I also like to have <span class="italic">some</span> free time so... you know.
                     </p>
                   </mat-card-content>
                   <mat-card-actions>
-                    <button mat-raised-button style="background: #FAFAFA">TO THE PORTFOLIO</button>
+                    <button mat-raised-button class="light-gray-button">TO THE PORTFOLIO</button>
                   </mat-card-actions>
                 </mat-card>
           </mat-grid-tile>
+
           <mat-grid-tile></mat-grid-tile>
+
           <mat-grid-tile></mat-grid-tile>
+
           <mat-grid-tile>      
-            <mat-card>
+            <mat-card class="card-2" [@scrollAnimation]="scrollAnimationState">
               <mat-card-content>
                 <p>
                   Hello there! The name's Lars, and I'm a web developer and socitechnical systems-engineer. I love clean coding and clean design. But I also like to have <span class="italic">some</span> free time so... you know.
                 </p>
               </mat-card-content>
               <mat-card-actions>
-                <button mat-raised-button style="background: #FAFAFA">TO THE PORTFOLIO</button>
+                <button mat-raised-button class="light-gray-button">TO THE PORTFOLIO</button>
               </mat-card-actions>
             </mat-card>
           </mat-grid-tile>
+
         </mat-grid-list>
-
-
   </div>
 
   <div class="home-bg-3">
@@ -69,7 +70,7 @@
           </text>
         </svg>
       </div>
-      <mat-card class="home-card">
+      <mat-card class="home-card" >
         <mat-card-header>
           <div mat-card-avatar class="portrait-image"></div>
           <mat-card-title>Lars Beck-Friis</mat-card-title>
@@ -81,7 +82,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button style="background: #FAFAFA">TO THE PORTFOLIO</button>
+          <button mat-raised-button class="light-gray-button">TO THE PORTFOLIO</button>
           <!--<button mat-button color="warn">GET ME OUT OF HERE</button>-->
         </mat-card-actions>
       </mat-card>
