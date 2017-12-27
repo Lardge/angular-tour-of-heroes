@@ -29,21 +29,19 @@ const flyInOutAnimation = trigger('flyInOut', [
 const homeAnimation = trigger('homeAnimation', [
   transition('* => *', [
     query('.letter', style({ opacity: 0, transform: 'translateY(-75%)'})),
+    query('mat-card', style({ opacity: 0 }), { optional: true }),
     query('.letter', stagger('100ms', [
-      animate('500ms 500ms ease-out', style({ opacity: 1, transform: 'translateX(0)' })),
-      /*/animate('1s ease-in', keyframes([
-        style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
-        style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
-        style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
-      ]))*/
-    ]))
+      animate('500ms 500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+    ])),
+    query('mat-card', stagger('100ms', [
+        animate('500ms ease-out', style({ opacity: 1 }))
+    ]), { optional: true })
   ])
 ]);
 
 const scrollAnimation = trigger('scrollAnimation', [
   state('show', style({
     opacity: 1 // ,
-    // transform: 'translateX(0)'
   })),
   state('hide',   style({
     opacity: 0,
@@ -51,17 +49,6 @@ const scrollAnimation = trigger('scrollAnimation', [
   })),
   transition('show => hide', animate('700ms cubic-bezier(.1,1,.1,1)')),
   transition('hide => show', animate('700ms cubic-bezier(.1,1,.1,1)'))
-    /*/animate('1s ease-in', keyframes([
-      style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
-      style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
-      style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
-    ]))*/
-  // ])),
-  // transition('hide => show', animate('700ms cubic-bezier(.1,1,.1,1)'))
-  /* query('show', stagger('100ms', [
-    animate('700ms cubic-bezier(.1,1,.1,1)')
-  ])))*/
-  // stagger('100ms', [animate('700ms cubic-bezier(.1,1,.1,1)')]))
 ]);
 
 @Component({
@@ -79,6 +66,7 @@ export class HomeComponent implements OnInit {
 
   // ANIMATION VARIBALES
   scrollAnimationState = 'hide';
+  footerScrollAnimationState = 'hide';
 
   constructor(public el: ElementRef) { }
 
@@ -88,7 +76,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  @HostListener('window:scroll', ['$event']) onWindowScroll($event) {
+  @HostListener('scroll', ['$event']) onElementScroll($event) {
     const componentPosition = this.el.nativeElement.offsetParent.offsetParent.offsetHeight;
     const scrollPosition = $event.path[0].scrollTop;
     // const scrollPosition = window.pageYOffset;
@@ -98,6 +86,12 @@ export class HomeComponent implements OnInit {
       this.scrollAnimationState = 'show';
     } else {
       this.scrollAnimationState = 'hide';
+    }
+
+    if (scrollPosition  >= (2 * componentPosition - halfWindowHeight)) {
+      this.footerScrollAnimationState = 'show';
+    } else {
+      this.footerScrollAnimationState = 'hide';
     }
 
   }
