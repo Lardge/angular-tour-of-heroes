@@ -3,6 +3,16 @@
 /* indigo-pink.css; */
 
 
+@font-face {
+    font-family: 'blowbrush';
+    src: url('assets/fonts/blowbrush.ttf');
+}
+
+@font-face {
+    font-family: 'QUARTZO';
+    src: url('assets/fonts/QUARTZO.ttf');
+}
+
 body {
     margin: 0px !important;
 }
@@ -26,12 +36,4 @@ app-about-me, app-home,  app-why-me,  app-home-projects{
     overflow-x: hidden;
 }
 
-@font-face {
-    font-family: 'blowbrush';
-    src: url('assets/fonts/blowbrush.ttf');
-}
 
-@font-face {
-    font-family: 'QUARTZO';
-    src: url('assets/fonts/QUARTZO.ttf');
-}

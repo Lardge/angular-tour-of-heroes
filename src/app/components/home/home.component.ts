@@ -30,12 +30,11 @@ const homeAnimation = trigger('homeAnimation', [
   transition('* => *', [
     query('.letter', style({ opacity: 0, transform: 'translateY(-75%)'})),
     query('mat-card', style({ opacity: 0 }), { optional: true }),
-    query('.letter', stagger('100ms', [
-      animate('500ms 500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-    ])),
-    query('mat-card', stagger('100ms', [
-        animate('500ms ease-out', style({ opacity: 1 }))
-    ]), { optional: true })
+
+    group([
+      query('mat-card', animate('1500ms 1500ms ease-out', style({ opacity: 1 })) , { optional: true }),
+      query('.letter', stagger('100ms', [ animate('500ms 500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))]))
+    ])
   ])
 ]);
 
