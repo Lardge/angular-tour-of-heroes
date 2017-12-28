@@ -13,6 +13,11 @@
     src: url('assets/fonts/QUARTZO.ttf');
 }
 
+@font-face {
+    font-family: 'Chardons';
+    src: url('assets/fonts/Chardons.ttf');
+}
+
 body {
     margin: 0px !important;
 }
@@ -23,7 +28,6 @@ section{
     height: 100%;
     overflow-x: hidden;
 }
-
 
 section>*{
     overflow-x: hidden;
