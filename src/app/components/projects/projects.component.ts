@@ -6,7 +6,7 @@ import { animate, transition, keyframes, stagger}       from '@angular/animation
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.less'],
-  animations: [
+  /*animations: [
     trigger('flyInOut', [
       state('in', style({transform: 'translateY(0)'})),
       transition('void => *', [
@@ -25,7 +25,7 @@ import { animate, transition, keyframes, stagger}       from '@angular/animation
           ]))
       ])
     ])
-  ]
+  ]*/
 })
 export class ProjectsComponent implements OnInit {
 

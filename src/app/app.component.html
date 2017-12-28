@@ -1,10 +1,10 @@
-<div class="example-container">
-  <mat-toolbar color="primary" class="example-toolbar">
+<div class="main-container">
+  <!--<mat-toolbar color="primary" class="example-toolbar">
     <button mat-icon-button class="menu-icon" (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="app-name">Portfolio - v2</h1>
-  </mat-toolbar>
+    <h1 class="app-name">Lars Beck-Friis</h1>
+  </mat-toolbar>-->
 
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #snav [mode]="'side'">
@@ -16,32 +16,15 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
+    <div class="block">
+      hej
+    </div>   
+
+    <mat-sidenav-content [@routeAnimation]="getRouteDepth(route)">
+      <button mat-icon-button class="menu-icon" (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet #route="outlet"></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
-
-<!--Button to open menu-->
-<!--<button mat-icon-button 
-        [matMenuTriggerFor]="appMenu"   
-        (@flyInOut.start)="animationStarted($event)"
-        (@flyInOut.done)="animationDone($event)"
-        [@flyInOut]="'in'">
-    <mat-icon>more_vert</mat-icon>
-</button>-->
-
-<!-- menu -->
-<!--<mat-menu #appMenu="matMenu">
-  <button mat-menu-item routerLink="/home">Home</button>
-  <button mat-menu-item routerLink="/about-me">About me</button>
-  <button mat-menu-item routerLink="/projects">Projects</button>
-</mat-menu> -->
-
-<!-- main and routing --> <!-- [@routerTransition]="getState(o)"-->
-<!--<main> 
-  <router-outlet></router-outlet>
-</main>-->
-
-
-<!--<app-messages></app-messages>-->

@@ -6,7 +6,7 @@ import { animate, transition, keyframes, stagger}       from '@angular/animation
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.less'],
-  animations: [
+  /*animations: [
     trigger('flyInOut', [
       state('in', style({transform: 'translateY(0)'})),
       transition('void => *', [
@@ -25,7 +25,7 @@ import { animate, transition, keyframes, stagger}       from '@angular/animation
           ]))
       ])
     ])
-  ]
+  ]*/
 })
 export class AboutMeComponent implements OnInit {
 
